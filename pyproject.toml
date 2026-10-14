@@ -1,0 +1,37 @@
+[project]
+name = "siaps-pacuja"
+version = "1.0.0"
+description = "Painel de desempenho da APS de Pacujá/CE a partir dos relatórios públicos do Siaps"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []  # só biblioteca padrão
+
+[project.optional-dependencies]
+dev = ["ruff", "mypy", "pip-audit", "coverage"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# E/F: erros e pyflakes; B: bugs comuns; S: segurança (bandit); UP: sintaxe moderna; SIM/C4: simplificações
+select = ["E", "F", "W", "B", "S", "UP", "SIM", "C4", "I"]
+ignore = ["S101"]  # assert é aceitável em testes
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S310", "S105"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+mypy_path = "src"
+files = ["src"]
+
+[tool.coverage.run]
+source = ["src/siaps_pacuja"]
+omit = ["*/__main__.py"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true

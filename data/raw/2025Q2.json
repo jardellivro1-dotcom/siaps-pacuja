@@ -1,0 +1,1483 @@
+{
+  "_meta": {
+    "descricao": "2º Quadrimestre/2025",
+    "nuQuadrimestre": "2025Q2"
+  },
+  "classificacaoFinalComponente": [
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicadorOrigem": 119,
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "percentualClassificacaoBom": 0.0,
+      "percentualClassificacaoOtimo": 100.0,
+      "percentualClassificacaoRegular": 0.0,
+      "percentualClassificacaoSuficiente": 0.0,
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 3,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE",
+      "tipoOrigem": "CVAT",
+      "totalEquipesValidasParaComponente": 3
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicadorOrigem": 120,
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "percentualClassificacaoBom": 0.0,
+      "percentualClassificacaoOtimo": 100.0,
+      "percentualClassificacaoRegular": 0.0,
+      "percentualClassificacaoSuficiente": 0.0,
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 1,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eMulti",
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "totalEquipesValidasParaComponente": 1
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicadorOrigem": 120,
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "percentualClassificacaoBom": 100.0,
+      "percentualClassificacaoOtimo": 0.0,
+      "percentualClassificacaoRegular": 0.0,
+      "percentualClassificacaoSuficiente": 0.0,
+      "qtdClassificacaoBom": 3,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSB",
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "totalEquipesValidasParaComponente": 3
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicadorOrigem": 120,
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "percentualClassificacaoBom": 100.0,
+      "percentualClassificacaoOtimo": 0.0,
+      "percentualClassificacaoRegular": 0.0,
+      "percentualClassificacaoSuficiente": 0.0,
+      "qtdClassificacaoBom": 3,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "totalEquipesValidasParaComponente": 3
+    }
+  ],
+  "classificacaoFinalPorDimensaoCvat": [
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 101,
+      "noDimensao": "CVAT - Dimensão Cadastro",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 3,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 102,
+      "noDimensao": "CVAT - Dimensão Acompanhamento",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 3,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    }
+  ],
+  "conceitoPorIndicadorQualidade": [
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 104,
+      "noIndicador": "Cuidado da Pessoa com Hipertensão",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 3,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 105,
+      "noIndicador": "Cuidado da Pessoa com Diabetes Mellitus",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 3,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 106,
+      "noIndicador": "Cuidado da Pessoa Idosa",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 3,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 107,
+      "noIndicador": "Cuidado da Gestante e da Puérpera",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 2,
+      "qtdClassificacaoOtimo": 1,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 108,
+      "noIndicador": "Cuidado no Desenvolvimento Infantil",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 1,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 2,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 109,
+      "noIndicador": "Cuidado Integral à Saúde da Mulher",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 3,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 110,
+      "noIndicador": "Mais Acesso à Atenção Primária à Saúde",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 1,
+      "qtdClassificacaoSuficiente": 2,
+      "sgEquipe": "eSF",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 111,
+      "noIndicador": "1ª Consulta Odontológica programada na APS",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 1,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 2,
+      "sgEquipe": "eSB",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 112,
+      "noIndicador": "Tratamento Odontológico concluído na APS",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 1,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 1,
+      "qtdClassificacaoSuficiente": 1,
+      "sgEquipe": "eSB",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 113,
+      "noIndicador": "Taxa de exodontias na APS",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 3,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSB",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 114,
+      "noIndicador": "Escovação Supervisionada na APS",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 2,
+      "qtdClassificacaoRegular": 1,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSB",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 115,
+      "noIndicador": "Procedimentos Odontológicos preventivos na APS",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 3,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSB",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 116,
+      "noIndicador": "Tratamento Restaurador Atraumático na APS",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 2,
+      "qtdClassificacaoRegular": 1,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eSB",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 117,
+      "noIndicador": "Média de atendimentos da eMulti por pessoa",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 0,
+      "qtdClassificacaoOtimo": 1,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eMulti",
+      "sgUf": "CE"
+    },
+    {
+      "coMunicipioIbge": "230990",
+      "coTipoIndicador": 118,
+      "noIndicador": "Ações interprofissionais realizadas pela eMulti na APS",
+      "noMunicipioAcentuado": "PACUJÁ",
+      "nuQuadrimestre": "2025Q2",
+      "qtdClassificacaoBom": 1,
+      "qtdClassificacaoOtimo": 0,
+      "qtdClassificacaoRegular": 0,
+      "qtdClassificacaoSuficiente": 0,
+      "sgEquipe": "eMulti",
+      "sgUf": "CE"
+    }
+  ],
+  "graficos": [
+    {
+      "coTipoIndicador": 101,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "CVAT - Dimensão Cadastro",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            3
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": "eSF",
+      "sgUf": "CE",
+      "tipoOrigem": "CVAT",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 102,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "CVAT - Dimensão Acompanhamento",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            3
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": "eSF",
+      "sgUf": "CE",
+      "tipoOrigem": "CVAT",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 119,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Vinculo e Acompanhamento Territorial - Classificacao Final",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            3
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": "eSF",
+      "sgUf": "CE",
+      "tipoOrigem": "CVAT",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 104,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Cuidado da Pessoa com Hipertensão",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            3
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 105,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Cuidado da Pessoa com Diabetes Mellitus",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            3
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 106,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Cuidado da Pessoa Idosa",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            3
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 107,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Cuidado da Gestante e da Puérpera",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            1
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            2
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 108,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Cuidado no Desenvolvimento Infantil",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            2
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 109,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Cuidado Integral à Saúde da Mulher",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            3
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 110,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Mais Acesso à Atenção Primária à Saúde",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            2
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 111,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "1ª Consulta Odontológica programada na APS",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            1
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            2
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 112,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Tratamento Odontológico concluído na APS",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 113,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Taxa de exodontias na APS",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            3
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 114,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Escovação Supervisionada na APS",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            2
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 115,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Procedimentos Odontológicos preventivos na APS",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            3
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 116,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Tratamento Restaurador Atraumático na APS",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            2
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 117,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Média de atendimentos da eMulti por pessoa",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            1
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 1,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 118,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Ações interprofissionais realizadas pela eMulti na APS",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": null,
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 1,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 120,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Qualidade - Classificacao Final",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            1
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": "eMulti",
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 1,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 120,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Qualidade - Classificacao Final",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            3
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": "eSB",
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    },
+    {
+      "coTipoIndicador": 120,
+      "legend": {
+        "data": [
+          "Ótimo",
+          "Bom",
+          "Suficiente",
+          "Regular"
+        ]
+      },
+      "noIndicador": "Qualidade - Classificacao Final",
+      "nuQuadrimestre": "Q2/25",
+      "series": [
+        {
+          "data": [
+            0
+          ],
+          "name": "Ótimo",
+          "type": "bar"
+        },
+        {
+          "data": [
+            3
+          ],
+          "name": "Bom",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Suficiente",
+          "type": "bar"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Regular",
+          "type": "bar"
+        }
+      ],
+      "sgEquipe": "eSF",
+      "sgUf": "CE",
+      "tipoOrigem": "QUALIDADE",
+      "total": 3,
+      "xAxis": {
+        "data": [
+          "Q2/25"
+        ],
+        "type": "category"
+      },
+      "yAxis": {
+        "type": "value"
+      }
+    }
+  ]
+}
