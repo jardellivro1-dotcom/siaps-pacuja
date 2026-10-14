@@ -13,11 +13,12 @@
 - **No painel:** faixa de alerta para dados com mais de 45 dias ou última tentativa com falha; rodapé mostra versão,
   revisão e data da coleta de cada período.
 - **Alerta automático:** se o workflow de atualização falhar, abre uma *issue* (“Falha na atualização automática do Siaps”).
+- **Monitor externo diário** (`monitor.yml`, roda na nuvem): confere se o site responde (HTTP 200) e se a última coleta tem menos de 45 dias; falhou ⇒ abre uma issue com label `monitor` (o GitHub avisa por e-mail); normalizou ⇒ fecha a issue.
 - **Logs:** `logs/siaps.log` (rotativo). Não contêm dados pessoais nem segredos.
 - **Disponibilidade do painel publicado:** monitor externo gratuito (ex.: UptimeRobot) apontando para <https://jardellivro1-dotcom.github.io/siaps-pacuja/> — *a configurar*.
 
 ## 3. Cópias de segurança e restauração
-- **Cópia:** o repositório Git é o backup (dados + histórico + revisões). Faça `git push` para um remoto; ideal: segundo remoto/espelho.
+- **Cópia:** o repositório Git é o backup (dados + histórico + revisões) e o `backup.yml` publica mensalmente (dia 14) uma Release `backup-AAAA-MM` com `dados-pacuja-*.tgz` + SHA-256 (12 mais recentes). Para restaurar: baixe o `.tgz`, confira o SHA-256, extraia em `data/` e rode `build`. Faça `git push` para um remoto; ideal: segundo remoto/espelho.
 - **Restaurar um estado anterior dos dados:** `git log -- data/` → `git checkout <commit> -- data/` →
   `python -m siaps_pacuja build`.
 - **Restaurar uma revisão oficial antiga de um período:** copie `data/raw/revisoes/<período>/revNNN_<sha8>.json` para

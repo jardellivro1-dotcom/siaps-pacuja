@@ -1,0 +1,55 @@
+name: Monitor (disponibilidade e atualidade)
+
+# Verificação externa ao computador do mantenedor: o site responde e os dados têm menos de 45 dias?
+# Falhou => abre UMA issue (o GitHub avisa por e-mail); voltou ao normal => fecha a issue sozinha.
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - name: Site no ar, HTTPS e dados atualizados
+        run: |
+          OWNER="${REPO%%/*}"; NOME="${REPO##*/}"
+          URL="https://${OWNER}.github.io/${NOME}/"
+          code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "$URL")
+          [ "$code" = "200" ] || { echo "Site respondeu HTTP $code em $URL"; exit 1; }
+          curl -s --max-time 30 "${URL}data.js?x=$RANDOM" -o data.js
+          python3 - <<'PY'
+          import re, sys
+          from datetime import datetime, timezone
+          texto = open("data.js", encoding="utf-8").read()
+          m = re.search(r'"ultimaBemSucedida": "([^"]+)"', texto)
+          limite = re.search(r'"obsoletoAposDias": (\d+)', texto)
+          if not m or not limite:
+              sys.exit("data.js sem informação da última coleta")
+          ultima = datetime.strptime(m.group(1), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+          dias = (datetime.now(timezone.utc) - ultima).days
+          print(f"Última coleta há {dias} dia(s); limite {limite.group(1)}")
+          if dias > int(limite.group(1)):
+              sys.exit(f"Dados desatualizados: última coleta há {dias} dias")
+          PY
+      - name: Fechar issue de alerta (voltou ao normal)
+        if: success()
+        run: |
+          for n in $(gh issue list --repo "$REPO" --label monitor --state open --json number -q '.[].number'); do
+            gh issue close "$n" --repo "$REPO" --comment "Verificação voltou ao normal em $(date -u +%Y-%m-%d)."
+          done
+      - name: Abrir issue de alerta (uma só)
+        if: failure()
+        run: |
+          gh label create monitor --repo "$REPO" --color B60205 --description "Alerta do monitor" 2>/dev/null || true
+          if [ "$(gh issue list --repo "$REPO" --label monitor --state open --json number -q length)" = "0" ]; then
+            gh issue create --repo "$REPO" --label monitor --title "Monitor: painel indisponível ou com dados desatualizados" \
+              --body "Execução ${GITHUB_RUN_ID}: ${GITHUB_SERVER_URL}/${REPO}/actions/runs/${GITHUB_RUN_ID}. Veja docs/OPERACAO.md (incidentes)."
+          fi

@@ -151,10 +151,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             Handler._lock.release()
 
 
+class _Servidor(http.server.ThreadingHTTPServer):
+    request_queue_size = 128  # o padrão (5) derruba/atrasa conexões simultâneas (medido em tools/teste_carga.py)
+    daemon_threads = True
+
+
 def criar_servidor(port: int, somente_leitura: bool = False) -> http.server.ThreadingHTTPServer:
     Handler._ultima_coleta = -1e9
     handler = type("HandlerConfigurado", (Handler,), {"somente_leitura": somente_leitura})
-    return http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)  # só localhost
+    return _Servidor(("127.0.0.1", port), handler)  # só localhost
 
 
 def serve(port: int, somente_leitura: bool = False) -> None:

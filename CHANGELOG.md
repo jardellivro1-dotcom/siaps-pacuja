@@ -4,6 +4,14 @@ Formato: [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versioname
 (`config.VERSAO_APP`) e a da metodologia (`config.METODOLOGIA["id"]`) são independentes: uma nova Nota Técnica
 muda só a metodologia.
 
+## [1.1.2] — 2026-10-14 · metodologia NT8-2026
+### Adicionado
+- `monitor.yml`: verificação diária externa (site no ar, dados com menos de 45 dias); abre/fecha issue de alerta sozinho.
+- `backup.yml`: backup mensal dos dados em Release do GitHub (12 mais recentes, com SHA-256).
+- `tools/teste_carga.py` e `docs/HOSPEDAGEM.md` (arquitetura gratuita, pré-requisitos e situação de cada um).
+### Corrigido
+- Servidor local: fila de conexões aumentada (5 → 128); p95 sob 25 acessos simultâneos caiu de ~520 ms para ~70 ms.
+
 ## [1.1.1] — 2026-10-14 · metodologia NT8-2026
 ### Adicionado
 - Repositório público no GitHub com `main` protegida (PR obrigatório + verificações), CODEOWNERS, alertas de

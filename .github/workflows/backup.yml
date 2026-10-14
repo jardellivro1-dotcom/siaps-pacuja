@@ -1,0 +1,34 @@
+name: Backup mensal dos dados
+
+# Cópia dos dados oficiais coletados (raw + revisões + CSV + manifesto) em uma Release do GitHub,
+# fora do computador do mantenedor. Mantém as 12 mais recentes. Restauração: docs/OPERACAO.md §3.
+on:
+  schedule:
+    - cron: "0 10 14 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Empacotar e publicar
+        run: |
+          TAG="backup-$(date -u +%Y-%m)"
+          tar czf "dados-pacuja-${TAG}.tgz" data/raw data/csv data/manifest.json
+          sha256sum "dados-pacuja-${TAG}.tgz" > "dados-pacuja-${TAG}.tgz.sha256"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "dados-pacuja-${TAG}.tgz" "dados-pacuja-${TAG}.tgz.sha256" --clobber
+          else
+            gh release create "$TAG" "dados-pacuja-${TAG}.tgz" "dados-pacuja-${TAG}.tgz.sha256" \
+              --title "Backup dos dados $(date -u +%Y-%m)" --notes "Cópia dos dados oficiais coletados. SHA-256 no arquivo .sha256." --prerelease
+          fi
+      - name: Manter só os 12 backups mais recentes
+        run: |
+          gh release list --limit 100 --json tagName,createdAt -q '[.[]|select(.tagName|startswith("backup-"))]|sort_by(.createdAt)|reverse|.[12:]|.[].tagName' \
+            | while read -r t; do gh release delete "$t" --cleanup-tag --yes; done
