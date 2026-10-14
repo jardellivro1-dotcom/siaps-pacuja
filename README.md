@@ -45,6 +45,7 @@ PYTHONPATH=src coverage run -m unittest discover -s tests && coverage report   #
 | [docs/PRIVACIDADE.md](docs/PRIVACIDADE.md) | Inventário de dados pessoais (LGPD), retenção, regras de uso |
 | [docs/OPERACAO.md](docs/OPERACAO.md) | Monitoramento, backup/restauração, publicação, reversão, incidentes |
 | [docs/VALIDACAO_USUARIOS.md](docs/VALIDACAO_USUARIOS.md) | Roteiro de validação com a Secretaria (pendente) |
+| [docs/HOSPEDAGEM.md](docs/HOSPEDAGEM.md) | Hospedagem gratuita, arquitetura de deploy e pré-requisitos para uso compartilhado |
 | [docs/CONFORMIDADE.md](docs/CONFORMIDADE.md) | Matriz dos 24 requisitos: situação, evidência e lacunas |
 | [CHANGELOG.md](CHANGELOG.md) | Versões do app e da metodologia |
 

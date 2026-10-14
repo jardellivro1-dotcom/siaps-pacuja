@@ -3,9 +3,9 @@
     "municipio": "Pacujá",
     "uf": "CE",
     "ibge": "230990",
-    "geradoEm": "2026-10-14 06:01 UTC",
+    "geradoEm": "2026-10-14 06:05 UTC",
     "fonte": "https://siaps.saude.gov.br/publico",
-    "versaoApp": "1.1.1",
+    "versaoApp": "1.1.2",
     "metodologia": {
       "id": "NT8-2026",
       "norma": "Nota Técnica nº 8/2026-DEAPS/SAPS/MS",

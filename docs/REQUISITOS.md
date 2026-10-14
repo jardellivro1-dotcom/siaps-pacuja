@@ -68,4 +68,5 @@ Cada critério aponta o teste automatizado que o verifica (`tests/`), quando exi
 
 ## 3. Desempenho (metas)
 Painel carrega em < 2 s em computador comum (≈ 60 KB de dados + Chart.js local de 200 KB); processar 40
-quadrimestres em < 2 s (`test_historico_grande_processa_rapido`); coleta completa < 30 s com a fonte saudável.
+quadrimestres em < 2 s (`test_historico_grande_processa_rapido`); coleta completa < 30 s com a fonte saudável; servidor local com 25
+acessos simultâneos: 0 erros e p95 < 250 ms (`tools/teste_carga.py`; medido ≈ 70 ms).
