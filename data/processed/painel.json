@@ -3,9 +3,21 @@
     "municipio": "Pacujá",
     "uf": "CE",
     "ibge": "230990",
-    "geradoEm": "2026-10-14 03:58 UTC",
+    "geradoEm": "2026-10-14 04:17 UTC",
     "fonte": "https://siaps.saude.gov.br/publico",
-    "notaTecnica": "Nota Técnica nº 8/2026-DEAPS/SAPS/MS (Portaria GM/MS nº 3.493/2024)",
+    "versaoApp": "1.1.0",
+    "metodologia": {
+      "id": "NT8-2026",
+      "norma": "Nota Técnica nº 8/2026-DEAPS/SAPS/MS",
+      "base_legal": "Portaria GM/MS nº 3.493/2024 (alterada pelas Portarias GM/MS nº 6.907, 7.799/2025)",
+      "revoga": "Nota Técnica nº 6/2025-DEAPS/SAPS/MS"
+    },
+    "coleta": {
+      "ultimaBemSucedida": "2026-10-14T04:07:00Z",
+      "ultimaTentativa": "2026-10-14T04:07:00Z",
+      "ultimoErro": null
+    },
+    "obsoletoAposDias": 45,
     "pontos": {
       "Ótimo": 1.0,
       "Bom": 0.75,
@@ -44,6 +56,7 @@
             "Suficiente": 0,
             "Regular": 0
           },
+          "predominante": "Ótimo",
           "dimensoes": [
             {
               "nome": "Dimensão Acompanhamento",
@@ -69,6 +82,7 @@
       "componente3": {
         "eMulti": {
           "equipes": 1,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 1,
             "Bom": 0,
@@ -92,6 +106,7 @@
               },
               "equipes": 1,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 6.0,
               "potencial": 0.0
             },
@@ -109,6 +124,7 @@
               },
               "equipes": 1,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 3.0,
               "potencial": 1.0
             }
@@ -116,6 +132,7 @@
         },
         "eSB": {
           "equipes": 3,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 0,
             "Bom": 3,
@@ -139,6 +156,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.6666666666666666,
+              "faixa": "Suficiente",
               "contribuicao": 1.3333,
               "potencial": 0.6667
             },
@@ -156,6 +174,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5,
+              "faixa": "Suficiente",
               "contribuicao": 1.0,
               "potencial": 1.0
             },
@@ -173,6 +192,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 2.0,
               "potencial": 0.0
             },
@@ -190,6 +210,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -207,6 +228,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.25,
+              "faixa": "Regular",
               "contribuicao": 0.5,
               "potencial": 1.5
             },
@@ -224,6 +246,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             }
@@ -231,6 +254,7 @@
         },
         "eSF": {
           "equipes": 3,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 0,
             "Bom": 3,
@@ -254,6 +278,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.4166666666666667,
+              "faixa": "Regular",
               "contribuicao": 0.4167,
               "potencial": 0.5833
             },
@@ -271,6 +296,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5833333333333334,
+              "faixa": "Suficiente",
               "contribuicao": 1.1667,
               "potencial": 0.8333
             },
@@ -288,6 +314,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
               "contribuicao": 1.6667,
               "potencial": 0.3333
             },
@@ -305,6 +332,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -322,6 +350,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -339,6 +368,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -356,6 +386,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5,
+              "faixa": "Suficiente",
               "contribuicao": 1.0,
               "potencial": 1.0
             }
@@ -453,7 +484,12 @@
           "pontuacaoMedia": 0.6666666666666666,
           "potencial": 0.6667
         }
-      ]
+      ],
+      "origem": {
+        "revisao": 1,
+        "coletadoEm": "2026-10-14T04:07:00Z",
+        "alteradoEm": "2026-10-14T04:07:00Z"
+      }
     },
     {
       "id": "2025Q3",
@@ -468,6 +504,7 @@
             "Suficiente": 0,
             "Regular": 0
           },
+          "predominante": "Ótimo",
           "dimensoes": [
             {
               "nome": "Dimensão Acompanhamento",
@@ -493,6 +530,7 @@
       "componente3": {
         "eMulti": {
           "equipes": 2,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 1,
             "Bom": 1,
@@ -516,6 +554,7 @@
               },
               "equipes": 2,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 4.5,
               "potencial": 1.5
             },
@@ -533,6 +572,7 @@
               },
               "equipes": 2,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 4.0,
               "potencial": 0.0
             }
@@ -540,6 +580,7 @@
         },
         "eSB": {
           "equipes": 3,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 1,
             "Bom": 2,
@@ -563,6 +604,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 2.0,
               "potencial": 0.0
             },
@@ -580,6 +622,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 1.5,
               "potencial": 0.5
             },
@@ -597,6 +640,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 2.0,
               "potencial": 0.0
             },
@@ -614,6 +658,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.25,
+              "faixa": "Regular",
               "contribuicao": 0.25,
               "potencial": 0.75
             },
@@ -631,6 +676,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.25,
+              "faixa": "Regular",
               "contribuicao": 0.5,
               "potencial": 1.5
             },
@@ -648,6 +694,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5833333333333334,
+              "faixa": "Suficiente",
               "contribuicao": 0.5833,
               "potencial": 0.4167
             }
@@ -655,6 +702,7 @@
         },
         "eSF": {
           "equipes": 3,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 0,
             "Bom": 3,
@@ -678,6 +726,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.9166666666666666,
+              "faixa": "Bom",
               "contribuicao": 0.9167,
               "potencial": 0.0833
             },
@@ -695,6 +744,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5,
+              "faixa": "Suficiente",
               "contribuicao": 1.0,
               "potencial": 1.0
             },
@@ -712,6 +762,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
               "contribuicao": 1.6667,
               "potencial": 0.3333
             },
@@ -729,6 +780,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -746,6 +798,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -763,6 +816,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -780,6 +834,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5,
+              "faixa": "Suficiente",
               "contribuicao": 1.0,
               "potencial": 1.0
             }
@@ -877,7 +932,12 @@
           "pontuacaoMedia": 0.75,
           "potencial": 0.5
         }
-      ]
+      ],
+      "origem": {
+        "revisao": 1,
+        "coletadoEm": "2026-10-14T04:07:00Z",
+        "alteradoEm": "2026-10-14T04:07:00Z"
+      }
     },
     {
       "id": "2026Q1",
@@ -892,6 +952,7 @@
             "Suficiente": 0,
             "Regular": 0
           },
+          "predominante": "Ótimo",
           "dimensoes": [
             {
               "nome": "Dimensão Acompanhamento",
@@ -917,6 +978,7 @@
       "componente3": {
         "eMulti": {
           "equipes": 2,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 1,
             "Bom": 1,
@@ -940,6 +1002,7 @@
               },
               "equipes": 2,
               "pontuacaoMedia": 0.625,
+              "faixa": "Suficiente",
               "contribuicao": 3.75,
               "potencial": 2.25
             },
@@ -957,6 +1020,7 @@
               },
               "equipes": 2,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 4.0,
               "potencial": 0.0
             }
@@ -964,6 +1028,7 @@
         },
         "eSB": {
           "equipes": 3,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 3,
             "Bom": 0,
@@ -987,6 +1052,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 2.0,
               "potencial": 0.0
             },
@@ -1004,6 +1070,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
               "contribuicao": 1.6667,
               "potencial": 0.3333
             },
@@ -1021,6 +1088,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 2.0,
               "potencial": 0.0
             },
@@ -1038,6 +1106,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 1.0,
               "potencial": 0.0
             },
@@ -1055,6 +1124,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.3333333333333333,
+              "faixa": "Regular",
               "contribuicao": 0.6667,
               "potencial": 1.3333
             },
@@ -1072,6 +1142,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
               "contribuicao": 1.0,
               "potencial": 0.0
             }
@@ -1079,6 +1150,7 @@
         },
         "eSF": {
           "equipes": 3,
+          "notaAproximada": false,
           "distFinal": {
             "Ótimo": 1,
             "Bom": 2,
@@ -1102,6 +1174,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
               "contribuicao": 0.8333,
               "potencial": 0.1667
             },
@@ -1119,6 +1192,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5,
+              "faixa": "Suficiente",
               "contribuicao": 1.0,
               "potencial": 1.0
             },
@@ -1136,6 +1210,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
               "contribuicao": 1.6667,
               "potencial": 0.3333
             },
@@ -1153,6 +1228,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
               "contribuicao": 0.8333,
               "potencial": 0.1667
             },
@@ -1170,6 +1246,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.9166666666666666,
+              "faixa": "Bom",
               "contribuicao": 0.9167,
               "potencial": 0.0833
             },
@@ -1187,6 +1264,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
               "contribuicao": 0.75,
               "potencial": 0.25
             },
@@ -1204,6 +1282,7 @@
               },
               "equipes": 3,
               "pontuacaoMedia": 0.5833333333333334,
+              "faixa": "Suficiente",
               "contribuicao": 1.1667,
               "potencial": 0.8333
             }
@@ -1301,7 +1380,12 @@
           "pontuacaoMedia": 0.8333333333333334,
           "potencial": 0.3333
         }
-      ]
+      ],
+      "origem": {
+        "revisao": 1,
+        "coletadoEm": "2026-10-14T04:07:00Z",
+        "alteradoEm": "2026-10-14T04:07:00Z"
+      }
     }
   ]
 }

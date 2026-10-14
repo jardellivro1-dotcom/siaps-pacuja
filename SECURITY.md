@@ -1,13 +1,15 @@
 # Política de segurança
 
+Avaliação de riscos completa, controles e testes: [docs/SEGURANCA.md](docs/SEGURANCA.md).
+
 ## Escopo e modelo de ameaças
 - O projeto usa **somente dados públicos** do Siaps (`apisiaps.saude.gov.br/api/public`). Não acessa a área restrita,
   não usa credenciais e não armazena dados pessoais (os relatórios são agregados por município).
-- O servidor local escuta **apenas em 127.0.0.1**. O único endpoint de escrita (`POST /api/atualizar`) exige o
-  cabeçalho `X-Requested-With: painel` (proteção contra CSRF), responde sem detalhes internos em caso de erro e
-  não permite atualizações simultâneas.
-- O painel aplica Content-Security-Policy, `nosniff`, `X-Frame-Options: DENY` e carrega o Chart.js com
-  versão fixa e Subresource Integrity.
+- O servidor local escuta **apenas em 127.0.0.1**, valida `Host` e `Origin`, e o único endpoint de escrita
+  (`POST /api/atualizar`) exige o cabeçalho `X-Requested-With: painel` (CSRF), permite 1 atualização por minuto e uma
+  por vez, e responde sem detalhes internos em caso de erro. `--somente-leitura` desliga a escrita.
+- O painel aplica Content-Security-Policy (só scripts da própria origem), `nosniff` e `X-Frame-Options: DENY`; o Chart.js
+  é servido localmente (sem CDN), com versão e hash registrados.
 - Se for publicado na internet (GitHub Pages), use apenas a pasta `dashboard/` (estática); **não exponha** o servidor
   `serve`/`/api/atualizar` publicamente.
 

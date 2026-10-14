@@ -11,9 +11,31 @@ CSV_DIR = ROOT / "data" / "csv"
 PROCESSED_DIR = ROOT / "data" / "processed"
 DASHBOARD_DIR = ROOT / "dashboard"
 
+VERSAO_APP = "1.1.0"
+
+# Versão da regra metodológica aplicada; muda quando uma nova Nota Técnica passar a valer.
+METODOLOGIA = {
+    "id": "NT8-2026",
+    "norma": "Nota Técnica nº 8/2026-DEAPS/SAPS/MS",
+    "base_legal": "Portaria GM/MS nº 3.493/2024 (alterada pelas Portarias GM/MS nº 6.907, 7.799/2025)",
+    "revoga": "Nota Técnica nº 6/2025-DEAPS/SAPS/MS",
+}
+
 # Somente endpoints públicos (sem autenticação) do Siaps.
 API_BASE = "https://apisiaps.saude.gov.br/api/public"
 PORTAL_URL = "https://siaps.saude.gov.br/publico"
+
+# Coletor: só fala com este host (https), sem seguir redirecionamentos.
+HOST_PERMITIDO = "apisiaps.saude.gov.br"
+QUADRIMESTRE_REGEX = r"^\d{4}Q[1-3]$"
+MAX_RESPOSTA_BYTES = 5_000_000  # respostas reais têm poucas dezenas de KB
+TIMEOUT_S = 60
+TENTATIVAS = 3
+INTERVALO_ENTRE_CONSULTAS_S = 1.0  # cortesia com a fonte
+INTERVALO_MIN_ATUALIZACAO_S = 60  # botão "Atualizar dados": no máximo 1 coleta por minuto
+LOCK_EXPIRA_S = 900  # trava de coleta esquecida (processo morto) expira em 15 min
+DADOS_OBSOLETOS_APOS_DIAS = 45  # alerta quando a última coleta bem-sucedida for mais antiga
+SCHEMA_VERSAO = 1  # versão do formato dos arquivos em data/
 
 UF = "CE"
 MUNICIPIO_NOME = "PACUJÁ"
@@ -23,7 +45,6 @@ MUNICIPIO_IBGE = "230990"  # código IBGE de 6 dígitos usado pelo Siaps (230990
 PRIMEIRO_QUADRIMESTRE = "2025Q2"
 
 # Conceito -> pontos (NT 8/2026, item 4.3.2)
-CONCEITOS = ("Ótimo", "Bom", "Suficiente", "Regular")
 PONTOS = {"Ótimo": 1.0, "Bom": 0.75, "Suficiente": 0.5, "Regular": 0.25}
 CAMPOS_CONCEITO = {
     "Ótimo": "qtdClassificacaoOtimo",
@@ -88,3 +109,15 @@ def classificar_componente_iii(nota: float) -> str:
     if nota > 2.5:
         return "Suficiente"
     return "Regular"
+
+
+def manifesto_path() -> Path:
+    return RAW_DIR.parent / "manifest.json"
+
+
+def revisoes_dir() -> Path:
+    return RAW_DIR / "revisoes"
+
+
+def lock_path() -> Path:
+    return RAW_DIR.parent / ".coleta.lock"

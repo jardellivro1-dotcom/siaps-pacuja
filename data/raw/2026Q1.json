@@ -1,7 +1,8 @@
 {
   "_meta": {
     "descricao": "1º Quadrimestre/2026",
-    "nuQuadrimestre": "2026Q1"
+    "nuQuadrimestre": "2026Q1",
+    "schemaVersao": 1
   },
   "classificacaoFinalComponente": [
     {

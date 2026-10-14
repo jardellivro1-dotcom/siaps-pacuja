@@ -17,29 +17,41 @@ Automação + painel web que monitora o **acesso e a qualidade da Atenção Prim
 
 ## Uso
 ```bash
-python -m siaps_pacuja update    # baixa dados novos + regenera o painel
-python -m siaps_pacuja serve     # http://127.0.0.1:8000
+python -m siaps_pacuja update                    # coleta + valida + publica dados novos e regenera o painel
+python -m siaps_pacuja serve                     # http://127.0.0.1:8000 (botão "Atualizar dados" incluso)
+python -m siaps_pacuja serve --somente-leitura   # sem endpoint de escrita
+python -m siaps_pacuja status                    # última coleta, erros e alerta de dados velhos (exit 1 se houver)
 ```
-Sem dependências de runtime (Python 3.10+). O botão **↻ Atualizar dados** do painel consulta o Siaps na hora
-(`POST /api/atualizar`, só disponível pelo servidor local / `Abrir Painel.bat`).
+No Windows, dê dois cliques em `Abrir Painel.bat`. Sem dependências de runtime (Python 3.10+).
 
-## Qualidade (rode antes de cada commit; a CI repete tudo)
+## Qualidade (a CI repete tudo)
 ```bash
-pip install ruff mypy coverage
-ruff check . && ruff format --check .     # lint (inclui regras de segurança) e formatação
+pip install -r requirements-dev.txt
+ruff check . && ruff format --check .      # lint (inclui regras de segurança) e formatação
 mypy                                       # tipagem estrita do código-fonte
-PYTHONPATH=src coverage run -m unittest discover -s tests && coverage report   # 28 testes, cobertura mínima 85%
+pip-audit -r requirements-dev.txt          # vulnerabilidades das ferramentas
+PYTHONPATH=src coverage run -m unittest discover -s tests && coverage report   # 82 testes, mínimo 85%
 ```
-Os testes incluem os exemplos numéricos da NT 8/2026, o cliente da API (com mocks), a validação de esquema,
-a idempotência da extração e a segurança do servidor (cabeçalhos, CSRF, vazamento de erros, path traversal).
 
-## Segurança e licença
-Veja [SECURITY.md](SECURITY.md). Licença [MIT](LICENSE). Dados: Ministério da Saúde (Siaps), acesso público.
+## Documentação
+| Documento | Conteúdo |
+|---|---|
+| [docs/REQUISITOS.md](docs/REQUISITOS.md) | Escopo, usuários, dados, limites e critérios de aceitação |
+| [docs/ARQUITETURA.md](docs/ARQUITETURA.md) | Módulos, fluxo de dados, responsabilidades, decisões |
+| [docs/METODOLOGIA.md](docs/METODOLOGIA.md) | Fórmulas, pesos, faixas, exceções, o que o painel calcula e não calcula |
+| [docs/SEGURANCA.md](docs/SEGURANCA.md) · [SECURITY.md](SECURITY.md) | Riscos → controles (OWASP ASVS) → testes; autenticação/autorização |
+| [docs/PRIVACIDADE.md](docs/PRIVACIDADE.md) | Inventário de dados pessoais (LGPD), retenção, regras de uso |
+| [docs/OPERACAO.md](docs/OPERACAO.md) | Monitoramento, backup/restauração, publicação, reversão, incidentes |
+| [docs/VALIDACAO_USUARIOS.md](docs/VALIDACAO_USUARIOS.md) | Roteiro de validação com a Secretaria (pendente) |
+| [docs/CONFORMIDADE.md](docs/CONFORMIDADE.md) | Matriz dos 24 requisitos: situação, evidência e lacunas |
+| [CHANGELOG.md](CHANGELOG.md) | Versões do app e da metodologia |
 
 ## Limites dos dados públicos (importante)
-O Siaps público traz, por quadrimestre, **quantas equipes ficaram em cada conceito por indicador**; o
-resultado quadrimestral já é a média dos meses calculada pelo Ministério. Valores mensais, percentuais e
-nota por equipe estão só na área restrita e **não são usados**. Por isso o painel mostra a *nota média
-estimada* do município (exata por linearidade: Σ peso × pontuação média) e o conceito final oficial por equipe.
-Para o Componente II exibe-se o conceito oficial e as dimensões Cadastro/Acompanhamento.
-Projeto independente, não oficial.
+O Siaps público traz, por quadrimestre, **quantas equipes ficaram em cada conceito por indicador**; o resultado
+quadrimestral já é a média dos meses calculada pelo Ministério. Valores mensais, percentuais e nota por equipe estão
+só na área restrita e **não são usados**. O painel mostra a *nota média estimada* do município (exata quando todas as
+equipes têm todos os indicadores; “≈” caso contrário) e o conceito final oficial por equipe. Detalhes em `docs/METODOLOGIA.md`.
+
+## Segurança e licença
+Veja [SECURITY.md](SECURITY.md) e `docs/SEGURANCA.md`. Licença [MIT](LICENSE). Dados: Ministério da Saúde (Siaps),
+acesso público. Projeto independente, não oficial. Mantenedor: Jardel Negreiros.

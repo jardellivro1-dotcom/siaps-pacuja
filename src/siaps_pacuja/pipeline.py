@@ -4,12 +4,14 @@ import json
 import shutil
 from datetime import datetime, timezone
 
-from . import config, metrics
+from . import config, extract, metrics
 from .config import Json
 
 
 def build() -> Json:
-    painel = metrics.construir_painel(datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
+    painel = metrics.construir_painel(
+        datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), extract.carregar_manifesto()
+    )
     config.PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     (config.PROCESSED_DIR / "painel.json").write_text(
         json.dumps(painel, ensure_ascii=False, indent=2), encoding="utf-8"

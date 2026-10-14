@@ -21,6 +21,7 @@ jobs:
           python-version: "3.12"
       - run: python -m unittest discover -s tests
       - run: python -m siaps_pacuja update
+      - run: python -m siaps_pacuja status
       - name: Commit se houver novos dados
         run: |
           git config user.name "siaps-bot"

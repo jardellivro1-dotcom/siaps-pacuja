@@ -1,0 +1,109 @@
+{
+  "coleta": {
+    "ultimaBemSucedida": "2026-10-14T04:07:00Z",
+    "ultimaTentativa": "2026-10-14T04:07:00Z",
+    "ultimoErro": null
+  },
+  "metodologia": "NT8-2026",
+  "municipio": {
+    "ibge": "230990",
+    "nome": "PACUJÁ",
+    "uf": "CE"
+  },
+  "quadrimestres": {
+    "2025Q2": {
+      "alteradoEm": "2026-10-14T04:07:00Z",
+      "arquivos": {
+        "csv/pacuja_2025Q2_classificacao_final.csv": "c2985ae34433a4c346324a40fda8f6f009b20148e6bca2c80d4ab3348497bd31",
+        "csv/pacuja_2025Q2_dimensoes_cvat.csv": "d059eee501790ed953d09530346ed6b3cf7d36d1979d99c661838d209a340f80",
+        "csv/pacuja_2025Q2_indicadores_qualidade.csv": "161fc962e550e9d4285c029c9ccb86e987687ce8b48b4f5fb9ff739ba55e0c52",
+        "raw/2025Q2.json": "8ce946344e98a0d81b457a5766f6c1965f9598e29520e3b4fef958c1d1a1c458"
+      },
+      "coletadoEm": "2026-10-14T04:07:00Z",
+      "descricao": "2º Quadrimestre/2025",
+      "filtros": {
+        "coMunicipioIbge": [
+          "230990"
+        ],
+        "nuQuadrimestre": [
+          "2025Q2"
+        ],
+        "uf": [
+          "CE"
+        ]
+      },
+      "fonte": "https://apisiaps.saude.gov.br/api/public/componente/indicador-quadrimestre/filtro",
+      "linhas": {
+        "classificacao_final": 4,
+        "dimensoes_cvat": 2,
+        "indicadores_qualidade": 15
+      },
+      "metodologia": "NT8-2026",
+      "revisao": 1,
+      "sha256": "6a0c18bf33b0884830e7aa868d14ede921601479ff1a6453ffd83377e3d39d7f"
+    },
+    "2025Q3": {
+      "alteradoEm": "2026-10-14T04:07:00Z",
+      "arquivos": {
+        "csv/pacuja_2025Q3_classificacao_final.csv": "9e00cc0ba5c40f2fbbd56595a8a775c7cd239415bab74f59bed3f94ad237c557",
+        "csv/pacuja_2025Q3_dimensoes_cvat.csv": "a87d6123832b34eeab8de999b74d90fae4352ac2dc3879ccc2ab18eaca204fdc",
+        "csv/pacuja_2025Q3_indicadores_qualidade.csv": "771bef965d57d84f3292858c1ce7cbfa8b9b2da30ba13cd93e26f06b93606f9c",
+        "raw/2025Q3.json": "ae44cc9ffc83e8756c56220b015b2dadecb773c52405b9130d00f575093748ca"
+      },
+      "coletadoEm": "2026-10-14T04:07:00Z",
+      "descricao": "3º Quadrimestre/2025",
+      "filtros": {
+        "coMunicipioIbge": [
+          "230990"
+        ],
+        "nuQuadrimestre": [
+          "2025Q3"
+        ],
+        "uf": [
+          "CE"
+        ]
+      },
+      "fonte": "https://apisiaps.saude.gov.br/api/public/componente/indicador-quadrimestre/filtro",
+      "linhas": {
+        "classificacao_final": 4,
+        "dimensoes_cvat": 2,
+        "indicadores_qualidade": 15
+      },
+      "metodologia": "NT8-2026",
+      "revisao": 1,
+      "sha256": "648d6ef1ee671f6f2cc8aaa87ed36a6fd77cd4193db36ed385652edff26a5979"
+    },
+    "2026Q1": {
+      "alteradoEm": "2026-10-14T04:07:00Z",
+      "arquivos": {
+        "csv/pacuja_2026Q1_classificacao_final.csv": "b68eb19b7db663044ffa9746ca7b25d560df80c4e8c548de2b387629c36499de",
+        "csv/pacuja_2026Q1_dimensoes_cvat.csv": "26eb92ad48722fadd780df1edd0c9cbea57b1c618c52faf7dc71437229998928",
+        "csv/pacuja_2026Q1_indicadores_qualidade.csv": "018aa81aebc8b97d9a19c779ce4830e3a53df99b8d628be16573511fa1b5e827",
+        "raw/2026Q1.json": "b1c7258800e4a4fbd752b7cab4cc6e149b2a377f4c2552c4e689afadfd8906ff"
+      },
+      "coletadoEm": "2026-10-14T04:07:00Z",
+      "descricao": "1º Quadrimestre/2026",
+      "filtros": {
+        "coMunicipioIbge": [
+          "230990"
+        ],
+        "nuQuadrimestre": [
+          "2026Q1"
+        ],
+        "uf": [
+          "CE"
+        ]
+      },
+      "fonte": "https://apisiaps.saude.gov.br/api/public/componente/indicador-quadrimestre/filtro",
+      "linhas": {
+        "classificacao_final": 4,
+        "dimensoes_cvat": 2,
+        "indicadores_qualidade": 15
+      },
+      "metodologia": "NT8-2026",
+      "revisao": 1,
+      "sha256": "abf95e26b8e20445468bf3ff167082351be66cd427a648e33580b29400ac574f"
+    }
+  },
+  "schemaVersao": 1
+}

@@ -27,6 +27,29 @@ def _pontuacao_media(dist: dict[str, int]) -> float | None:
     return sum(dist[c] * config.PONTOS[c] for c in dist) / n
 
 
+def faixa_pontuacao(pontuacao_media: float | None) -> str | None:
+    """Faixa visual da pontuação média de um indicador (1,00 Ótimo · >=0,75 Bom · >=0,50 Suficiente).
+
+    NÃO é a classificação oficial de nenhuma equipe: serve só para colorir o mapa de calor, onde a
+    média municipal pode cair entre dois conceitos.
+    """
+    if pontuacao_media is None:
+        return None
+    if pontuacao_media >= 1:
+        return "Ótimo"
+    if pontuacao_media >= 0.75:
+        return "Bom"
+    return "Suficiente" if pontuacao_media >= 0.5 else "Regular"
+
+
+def conceito_predominante(dist: dict[str, int]) -> str | None:
+    """Conceito com mais equipes; em caso de empate, o menos favorável (leitura conservadora)."""
+    maior = max(dist.values(), default=0)
+    if not maior:
+        return None
+    return [c for c in reversed(config.PONTOS) if dist[c] == maior][0]
+
+
 def _rotulo(nu: str) -> str:
     return f"{LABEL_MES[nu[4:]]} quad/{nu[:4]}"
 
@@ -47,6 +70,7 @@ def _indicador(equipe: str, linha: Json) -> Json | None:
         "dist": d,
         "equipes": sum(d.values()),
         "pontuacaoMedia": pm,
+        "faixa": faixa_pontuacao(pm),
         "contribuicao": None if pm is None else round(pm * peso, 4),
         # pontos que ainda podem ser ganhos se todas as equipes chegassem a "Ótimo"
         "potencial": None if pm is None else round((1 - pm) * peso, 4),
@@ -58,8 +82,14 @@ def _equipe_qualidade(equipe: str, linhas_ind: list[Json], linha_final: Json | N
     indicadores.sort(key=lambda i: (i["codigo"][0], int(i["codigo"][1:])))
     validos = [i for i in indicadores if i["pontuacaoMedia"] is not None]
     nota = round(sum(i["contribuicao"] for i in validos), 2) if validos else None
+    total = linha_final["totalEquipesValidasParaComponente"] if linha_final else None
+    # A média das notas só é exata pela soma peso x pontuação média se todas as equipes têm todos os
+    # indicadores. Se o nº de equipes avaliadas varia entre indicadores (ex.: C2/C3 dependem de haver
+    # crianças de 2 anos/gestações encerrando o puerpério), a nota é apenas aproximada.
+    aproximada = bool(total) and (len(validos) < len(indicadores) or any(i["equipes"] != total for i in validos))
     return {
-        "equipes": linha_final["totalEquipesValidasParaComponente"] if linha_final else None,
+        "equipes": total,
+        "notaAproximada": aproximada,
         "distFinal": _dist(linha_final) if linha_final else None,
         "notaMedia": nota,
         "classificacaoNotaMedia": config.classificar_componente_iii(nota) if nota is not None else None,
@@ -91,6 +121,7 @@ def processar_quadrimestre(relatorio: Json) -> Json:
         eq: {
             "equipes": linha["totalEquipesValidasParaComponente"],
             "distFinal": _dist(linha),
+            "predominante": conceito_predominante(_dist(linha)),
             "dimensoes": sorted(dim_por_equipe.get(eq, []), key=lambda d: d["nome"]),
         }
         for eq, linha in sorted(cvat_final.items())
@@ -122,15 +153,18 @@ def _prioridades(quad: Json, limite: int = 6) -> list[Json]:
 
 
 def carregar_brutos() -> list[Json]:
-    from_dir = sorted(config.RAW_DIR.glob("*.json"))
-    return [json.loads(p.read_text(encoding="utf-8")) for p in from_dir]
+    return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(config.RAW_DIR.glob("*.json"))]
 
 
-def construir_painel(gerado_em: str) -> Json:
+def construir_painel(gerado_em: str, manifesto: Json | None = None) -> Json:
+    manifesto = manifesto or {"coleta": {}, "quadrimestres": {}}
     quads = [processar_quadrimestre(r) for r in carregar_brutos()]
     quads.sort(key=lambda q: q["id"])
     for q in quads:
         q["prioridades"] = _prioridades(q)
+        q["origem"] = {
+            k: manifesto["quadrimestres"].get(q["id"], {}).get(k) for k in ("revisao", "coletadoEm", "alteradoEm")
+        }
     return {
         "meta": {
             "municipio": config.MUNICIPIO_NOME.title(),
@@ -138,7 +172,10 @@ def construir_painel(gerado_em: str) -> Json:
             "ibge": config.MUNICIPIO_IBGE,
             "geradoEm": gerado_em,
             "fonte": config.PORTAL_URL,
-            "notaTecnica": "Nota Técnica nº 8/2026-DEAPS/SAPS/MS (Portaria GM/MS nº 3.493/2024)",
+            "versaoApp": config.VERSAO_APP,
+            "metodologia": config.METODOLOGIA,
+            "coleta": manifesto["coleta"],
+            "obsoletoAposDias": config.DADOS_OBSOLETOS_APOS_DIAS,
             "pontos": config.PONTOS,
             "janelas": config.JANELAS,
         },

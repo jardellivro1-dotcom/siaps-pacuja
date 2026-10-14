@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <title>APS Pacujá · Painel Siaps</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -16,15 +17,30 @@
     </div>
     <div class="actions">
       <label class="sel">Quadrimestre
-        <select id="quad" aria-label="Quadrimestre"></select>
+        <select id="quad"></select>
       </label>
-      <button id="btn-atualizar" class="btn" type="button">↻ Atualizar dados</button>
+      <button id="btn-atualizar" class="btn" type="button" hidden>↻ Atualizar dados</button>
     </div>
     <p id="status" class="status" role="status" aria-live="polite"></p>
   </div>
 </header>
 
 <main class="wrap" id="conteudo" tabindex="-1">
+  <div id="aviso" class="alerta" role="alert" hidden></div>
+
+  <section aria-labelledby="h-como">
+    <details class="note" id="como">
+      <summary id="h-como">Como ler este painel</summary>
+      <ul>
+        <li><strong>Unidade:</strong> número de <em>equipes</em>. Pacujá tem poucas equipes (por exemplo, 3 eSF): cada equipe pesa muito, e “1 de 3” é 33%.</li>
+        <li><strong>Conceito (Ótimo, Bom, Suficiente, Regular)</strong> é a classificação oficial do Ministério. Não é percentual de execução das práticas — os percentuais mensais não são públicos.</li>
+        <li><strong>Resultado do quadrimestre</strong> = média dos meses monitorados. A <strong>janela de monitoramento</strong> (30 dias a 60 meses, conforme o indicador) é o período observado em cada mês, não o período da média.</li>
+        <li><strong>Componentes II e III</strong> avaliam as mesmas equipes de Saúde da Família por critérios diferentes. Os grupos se sobrepõem: não os some.</li>
+        <li><strong>Nota média estimada</strong> é uma média municipal calculada a partir das contagens públicas. Não é a nota de nenhuma equipe nem define o valor do incentivo.</li>
+      </ul>
+    </details>
+  </section>
+
   <section aria-labelledby="h-resumo">
     <h2 id="h-resumo">Resumo do quadrimestre <small id="quad-desc"></small></h2>
     <div class="cards" id="cards"></div>
@@ -36,11 +52,29 @@
     <ol class="prio" id="prio"></ol>
   </section>
 
+  <section aria-labelledby="h-plano">
+    <h2 id="h-plano">Plano de ação</h2>
+    <p class="note" id="plano-aviso">
+      <strong>Armazenado somente neste navegador</strong> (não é enviado a nenhum servidor e não é compartilhado).
+      Apagar os dados do navegador apaga o plano: use <em>Exportar</em> para guardar uma cópia.
+      <strong>Não escreva nomes de pessoas nem dados clínicos identificáveis</strong> — informe o setor responsável, não a pessoa.
+    </p>
+    <div id="plano"></div>
+    <div class="actions-row">
+      <button class="btn" type="button" id="plano-export">Exportar plano (CSV)</button>
+      <button class="btn sec" type="button" id="plano-limpar">Limpar plano deste quadrimestre</button>
+    </div>
+  </section>
+
   <section aria-labelledby="h-evo">
     <h2 id="h-evo">Evolução entre quadrimestres</h2>
     <div class="grid2">
-      <figure><figcaption>Nota média estimada — Componente III (0 a 10)</figcaption><div class="chart"><canvas id="c-nota" role="img" aria-label="Gráfico de linhas: nota média estimada do Componente III por tipo de equipe em cada quadrimestre. Os mesmos valores estão nos cartões de resumo."></canvas></div></figure>
-      <figure><figcaption>Equipes por conceito final — todas as equipes</figcaption><div class="chart"><canvas id="c-dist" role="img" aria-label="Gráfico de barras empilhadas: número de equipes por conceito final (Ótimo, Bom, Suficiente, Regular) em cada quadrimestre."></canvas></div></figure>
+      <figure><figcaption>Nota média estimada — Componente III (0 a 10)</figcaption>
+        <div class="chart"><canvas id="c-nota" role="img" aria-label="Gráfico de linhas da nota média estimada do Componente III por tipo de equipe em cada quadrimestre. Os valores estão na tabela logo abaixo."></canvas></div>
+        <details><summary>Ver dados em tabela</summary><div class="table-scroll" id="t-nota"></div></details></figure>
+      <figure><figcaption>Equipes por conceito final — Componente III (eSF + eSB + eMulti)</figcaption>
+        <div class="chart"><canvas id="c-dist" role="img" aria-label="Gráfico de barras empilhadas com o número de equipes por conceito final do Componente III em cada quadrimestre. Os valores estão na tabela logo abaixo."></canvas></div>
+        <details><summary>Ver dados em tabela</summary><div class="table-scroll" id="t-dist"></div></details></figure>
     </div>
   </section>
 
@@ -48,8 +82,11 @@
     <h2 id="h-ind">Componente III · Indicadores de qualidade</h2>
     <div class="tabs" id="tabs" role="tablist" aria-label="Tipo de equipe"></div>
     <div class="grid2">
-      <figure><figcaption>Conceito das equipes por indicador <span id="ind-q"></span></figcaption><div class="chart tall"><canvas id="c-ind" role="img" aria-label="Gráfico de barras: conceito das equipes em cada indicador do tipo de equipe selecionado. Os valores estão na tabela ao lado."></canvas></div></figure>
-      <figure><figcaption>Pontuação média por indicador (1,00 = todas “Ótimo”)</figcaption><div class="table-scroll"><table id="heat"><caption class="sr">Pontuação média por indicador e quadrimestre</caption></table></div></figure>
+      <figure><figcaption>Conceito das equipes por indicador <span id="ind-q"></span></figcaption>
+        <div class="chart tall"><canvas id="c-ind" role="img" aria-label="Gráfico de barras com o número de equipes por conceito em cada indicador do tipo de equipe selecionado. Os valores estão na tabela abaixo."></canvas></div>
+        <details><summary>Ver dados em tabela</summary><div class="table-scroll" id="t-ind"></div></details></figure>
+      <figure><figcaption>Pontuação média por indicador (1,00 = todas “Ótimo”)</figcaption>
+        <div class="table-scroll"><table id="heat"></table></div></figure>
     </div>
   </section>
 
@@ -59,7 +96,7 @@
   </section>
 
   <section aria-labelledby="h-met">
-    <h2 id="h-met">Metodologia e limites dos dados</h2>
+    <h2 id="h-met">Metodologia, fontes e limites dos dados</h2>
     <div class="note" id="metodo"></div>
     <h3>Relatórios CSV extraídos</h3>
     <ul class="csv" id="csv"></ul>
@@ -68,7 +105,7 @@
 
 <footer class="wrap foot" id="foot"></footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="vendor/chart.umd.min.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>
