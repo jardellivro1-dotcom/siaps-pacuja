@@ -1,7 +1,7 @@
 {
   "coleta": {
-    "ultimaBemSucedida": "2026-10-14T04:07:00Z",
-    "ultimaTentativa": "2026-10-14T04:07:00Z",
+    "ultimaBemSucedida": "2026-10-14T06:01:49Z",
+    "ultimaTentativa": "2026-10-14T06:01:49Z",
     "ultimoErro": null
   },
   "metodologia": "NT8-2026",
@@ -19,7 +19,7 @@
         "csv/pacuja_2025Q2_indicadores_qualidade.csv": "161fc962e550e9d4285c029c9ccb86e987687ce8b48b4f5fb9ff739ba55e0c52",
         "raw/2025Q2.json": "8ce946344e98a0d81b457a5766f6c1965f9598e29520e3b4fef958c1d1a1c458"
       },
-      "coletadoEm": "2026-10-14T04:07:00Z",
+      "coletadoEm": "2026-10-14T06:01:49Z",
       "descricao": "2º Quadrimestre/2025",
       "filtros": {
         "coMunicipioIbge": [
@@ -50,7 +50,7 @@
         "csv/pacuja_2025Q3_indicadores_qualidade.csv": "771bef965d57d84f3292858c1ce7cbfa8b9b2da30ba13cd93e26f06b93606f9c",
         "raw/2025Q3.json": "ae44cc9ffc83e8756c56220b015b2dadecb773c52405b9130d00f575093748ca"
       },
-      "coletadoEm": "2026-10-14T04:07:00Z",
+      "coletadoEm": "2026-10-14T06:01:49Z",
       "descricao": "3º Quadrimestre/2025",
       "filtros": {
         "coMunicipioIbge": [
@@ -81,7 +81,7 @@
         "csv/pacuja_2026Q1_indicadores_qualidade.csv": "018aa81aebc8b97d9a19c779ce4830e3a53df99b8d628be16573511fa1b5e827",
         "raw/2026Q1.json": "b1c7258800e4a4fbd752b7cab4cc6e149b2a377f4c2552c4e689afadfd8906ff"
       },
-      "coletadoEm": "2026-10-14T04:07:00Z",
+      "coletadoEm": "2026-10-14T06:01:49Z",
       "descricao": "1º Quadrimestre/2026",
       "filtros": {
         "coMunicipioIbge": [
