@@ -11,7 +11,7 @@ CSV_DIR = ROOT / "data" / "csv"
 PROCESSED_DIR = ROOT / "data" / "processed"
 DASHBOARD_DIR = ROOT / "dashboard"
 
-VERSAO_APP = "1.1.0"
+VERSAO_APP = "1.1.1"
 
 # Versão da regra metodológica aplicada; muda quando uma nova Nota Técnica passar a valer.
 METODOLOGIA = {

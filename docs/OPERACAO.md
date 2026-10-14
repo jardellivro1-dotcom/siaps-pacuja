@@ -3,7 +3,7 @@
 ## 1. Rotina
 | Quando | O quê |
 |---|---|
-| Todo dia 12 (automático) | `.github/workflows/atualizar.yml` roda testes + `update` e faz commit se houve dado novo. O envio ao Siaps vai até o dia 10 do mês seguinte (NT 2.7). |
+| Todo dia 12 (automático) | `.github/workflows/atualizar.yml` roda testes + `update` e abre um PR com os dados. O envio ao Siaps vai até o dia 10 do mês seguinte (NT 2.7). |
 | Sob demanda | `Abrir Painel.bat` ou botão **Atualizar dados** (limite de 1 por minuto). |
 | Mensal | Conferir `python -m siaps_pacuja status`; revisar PRs do Dependabot. |
 
@@ -14,7 +14,7 @@
   revisão e data da coleta de cada período.
 - **Alerta automático:** se o workflow de atualização falhar, abre uma *issue* (“Falha na atualização automática do Siaps”).
 - **Logs:** `logs/siaps.log` (rotativo). Não contêm dados pessoais nem segredos.
-- **Disponibilidade do painel publicado:** monitor externo gratuito (ex.: UptimeRobot) apontando para a URL do Pages — *a configurar*.
+- **Disponibilidade do painel publicado:** monitor externo gratuito (ex.: UptimeRobot) apontando para <https://jardellivro1-dotcom.github.io/siaps-pacuja/> — *a configurar*.
 
 ## 3. Cópias de segurança e restauração
 - **Cópia:** o repositório Git é o backup (dados + histórico + revisões). Faça `git push` para um remoto; ideal: segundo remoto/espelho.
@@ -28,17 +28,32 @@
 - **Plano de ação (navegador):** exportar CSV regularmente; não há cópia no servidor.
 
 ## 4. Publicação controlada
-1. **Desenvolvimento:** branch + PR; a CI (`ci.yml`) roda lint, formatação, tipagem, testes com cobertura mínima de 85% e
-   `pip-audit` das ferramentas de desenvolvimento.
-2. **Homologação:** `python -m siaps_pacuja serve --somente-leitura` em máquina separada **ou** deploy do *Pages* de um
-   branch/fork de teste; validar com a coordenação (`VALIDACAO_USUARIOS.md`) antes de promover.
-3. **Produção:** criar tag `vX.Y.Z` (a versão deve coincidir com `config.VERSAO_APP` e `CHANGELOG.md`); o workflow
-   `publicar.yml` repete as verificações e só então publica `dashboard/` no GitHub Pages (HTTPS).
+**Endereços:** repositório <https://github.com/jardellivro1-dotcom/siaps-pacuja> · painel publicado (HTTPS) <https://jardellivro1-dotcom.github.io/siaps-pacuja/>.
+
+**Proteção da `main` (ruleset “proteger-main”, ativo):** sem push direto, sem force-push, sem apagar; histórico linear;
+mudanças só por *pull request* com 1 aprovação e conversas resolvidas; ramo atualizado e **7 verificações obrigatórias**
+(`qualidade` + `compatibilidade` em Ubuntu e Windows × Python 3.10/3.12/3.13). Testado: um push direto foi recusado.
+Também ativos: alertas de vulnerabilidade, *secret scanning* com *push protection*, Dependabot (Actions e pip), só *squash merge*,
+ramo apagado após o merge.
+
+**Mantenedor único (situação atual):** o ruleset permite que o *admin* do repositório mescle **o próprio PR** sem a aprovação
+(“bypass: somente via pull request”), mas nunca grave direto na `main` nem pule as verificações. Quando houver um segundo
+revisor, adicione-o como colaborador e remova o *bypass* em *Settings → Rules → proteger-main* — a revisão passa a ser de fato independente.
+
+**Fluxo de mudança:** branch → PR → CI verde → revisão → *squash merge* → (se mudou `dashboard/`) publicação automática.
+**Fluxo de dados mensal:** `atualizar.yml` coleta, abre um PR “Atualização dos dados do Siaps” e dispara a CI no ramo;
+confira `data/manifest.json`, mescle, e o `publicar.yml` publica sozinho.
+
+1. **Desenvolvimento:** máquina local + PR; a CI roda lint, formatação, tipagem, `pip-audit`, testes com cobertura mínima de 85%
+   e a matriz de compatibilidade.
+2. **Homologação:** `python -m siaps_pacuja serve --somente-leitura` em máquina separada, ou *fork*/branch de teste com seu próprio
+   Pages; validar com a coordenação (`VALIDACAO_USUARIOS.md`) antes de promover. *(Ambiente dedicado ainda não provisionado.)*
+3. **Produção:** criar a tag `vX.Y.Z` (deve coincidir com `config.VERSAO_APP` e `CHANGELOG.md`; o workflow recusa se divergir).
 4. **Identificação da versão publicada:** rodapé do painel (“Painel vX.Y.Z · metodologia NT8-2026 · revisão rN”).
-5. **Reversão:** `git revert` do commit/tag problemático e nova tag, ou republicar a tag anterior pelo `publicar.yml`
-   (*Run workflow* → escolher a tag). Dados: ver seção 3.
-6. **Migrações:** mudança no formato de `data/` ⇒ incrementar `config.SCHEMA_VERSAO`, escrever o conversor, testá-lo com uma
-   cópia dos dados reais e só então aplicar; registrar no `CHANGELOG.md`.
+5. **Reversão:** *Actions → Publicar painel → Run workflow* escolhendo a tag anterior (republica aquela versão) **e** `git revert`
+   do PR problemático. Dados: seção 3.
+6. **Migrações:** mudança no formato de `data/` ⇒ incrementar `config.SCHEMA_VERSAO`, escrever o conversor, testá-lo com cópia dos
+   dados reais e só então aplicar; registrar no `CHANGELOG.md`.
 
 ## 5. Resposta a incidentes
 | Incidente | Primeiros passos |

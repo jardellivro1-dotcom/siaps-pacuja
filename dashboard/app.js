@@ -271,7 +271,8 @@
     }
   };
   async function detectarServidor() {
-    if (!/^https?:$/.test(location.protocol)) return;
+    // O endpoint só existe no servidor local; em hospedagem estática (Pages) nem tenta (evita 404 no console).
+    if (!["127.0.0.1", "localhost"].includes(location.hostname)) return;
     try {
       const r = await fetch("/api/estado", { headers: { Accept: "application/json" } });
       if (r.ok && (await r.json()).atualizacaoHabilitada) btn.hidden = false;
