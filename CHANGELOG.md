@@ -4,7 +4,17 @@ Formato: [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versioname
 (`config.VERSAO_APP`) e a da metodologia (`config.METODOLOGIA["id"]`) são independentes: uma nova Nota Técnica
 muda só a metodologia.
 
-## [1.1.0] — 2026-10-14 · metodologia NT8-2026
+## [1.1.1] — 2026-10-14 · metodologia NT8-2026
+### Adicionado
+- Repositório público no GitHub com `main` protegida (PR obrigatório + verificações), CODEOWNERS, alertas de
+  vulnerabilidade, *secret scanning* e *push protection*.
+- Publicação no GitHub Pages (HTTPS) a cada tag `vX.Y.Z` e quando `dashboard/` muda na `main`.
+- Atualização mensal agora abre um PR de dados (e dispara a CI no ramo) em vez de gravar na `main`.
+- CI em matriz: Ubuntu e Windows × Python 3.10, 3.12 e 3.13.
+### Alterado
+- CSP também via `<meta>` (o Pages não permite cabeçalhos); o painel só consulta `/api/estado` no servidor local.
+
+## [1.1.0] — 2026-10-14 · metodologia NT8-2026 (interna, não publicada)
 ### Adicionado
 - Manifesto de coleta (`data/manifest.json`): fonte, filtros, horário, revisão e SHA-256 de cada arquivo.
 - Revisões: se o dado oficial de um período mudar, a versão anterior é arquivada em `data/raw/revisoes/`.

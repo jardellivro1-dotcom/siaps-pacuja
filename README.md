@@ -1,5 +1,7 @@
 # APS Pacujá · Painel de desempenho (Siaps)
 
+**Painel online:** <https://jardellivro1-dotcom.github.io/siaps-pacuja/> · **Código:** <https://github.com/jardellivro1-dotcom/siaps-pacuja> · [![CI](https://github.com/jardellivro1-dotcom/siaps-pacuja/actions/workflows/ci.yml/badge.svg)](https://github.com/jardellivro1-dotcom/siaps-pacuja/actions/workflows/ci.yml)
+
 Automação + painel web que monitora o **acesso e a qualidade da Atenção Primária à Saúde de Pacujá/CE**
 (Componente II – Vínculo e Acompanhamento Territorial; Componente III – Qualidade), seguindo a
 **Nota Técnica nº 8/2026-DEAPS/SAPS/MS** (Portaria GM/MS nº 3.493/2024).

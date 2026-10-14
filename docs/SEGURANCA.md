@@ -37,7 +37,8 @@ Não há segredos, credenciais, contas, banco de dados nem dados pessoais de pac
 | **V4 – Fonte exige autenticação** | Interrompe a coleta; nunca tenta contornar | `test_autenticacao_exigida_interrompe…` |
 | **V10/Cadeia de fornecimento** | Zero dependências de runtime; Chart.js local com versão/hash/licença em `dashboard/vendor/README.md`; Dependabot para GitHub Actions; `pip-audit` das ferramentas de desenvolvimento na CI | CI |
 | **V14 – Cabeçalhos** | CSP, `nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: no-referrer`, `Cross-Origin-Resource-Policy`, `Cache-Control: no-store`; sem banner de versão | `test_cabecalhos_de_seguranca`, `test_nao_revela_versao_do_python` |
-| **Segredos no repositório** | Nenhum segredo existe; teste varre arquivos versionados por padrões de chave/token; `.env`, `logs/` no `.gitignore` | `test_repo_higiene` |
+| **Segredos no repositório** | Nenhum segredo existe; teste varre arquivos versionados; `.env`, `logs/` no `.gitignore`; *secret scanning* e *push protection* do GitHub ativos | `test_repo_higiene`; configuração do repositório |
+| **Mudança indevida na `main` / cadeia de entrega** | Ruleset: sem push direto, PR + aprovação + 7 verificações obrigatórias; só *squash merge*; workflows com permissões mínimas | push direto recusado (testado) |
 | **Negação de serviço local** (conexões lentas) | `timeout = 30 s` por conexão | revisão de código |
 
 ## 4. Proteção de segredos e infraestrutura
