@@ -3,7 +3,7 @@
     "municipio": "Pacujá",
     "uf": "CE",
     "ibge": "230990",
-    "geradoEm": "2026-10-14 06:05 UTC",
+    "geradoEm": "2026-11-12 17:30 UTC",
     "fonte": "https://siaps.saude.gov.br/publico",
     "versaoApp": "1.1.2",
     "metodologia": {
@@ -13,8 +13,8 @@
       "revoga": "Nota Técnica nº 6/2025-DEAPS/SAPS/MS"
     },
     "coleta": {
-      "ultimaBemSucedida": "2026-10-14T06:01:49Z",
-      "ultimaTentativa": "2026-10-14T06:01:49Z",
+      "ultimaBemSucedida": "2026-11-12T17:28:22Z",
+      "ultimaTentativa": "2026-11-12T17:28:22Z",
       "ultimoErro": null
     },
     "obsoletoAposDias": 45,
@@ -487,7 +487,7 @@
       ],
       "origem": {
         "revisao": 1,
-        "coletadoEm": "2026-10-14T06:01:49Z",
+        "coletadoEm": "2026-11-12T17:28:22Z",
         "alteradoEm": "2026-10-14T04:07:00Z"
       }
     },
@@ -935,7 +935,7 @@
       ],
       "origem": {
         "revisao": 1,
-        "coletadoEm": "2026-10-14T06:01:49Z",
+        "coletadoEm": "2026-11-12T17:28:22Z",
         "alteradoEm": "2026-10-14T04:07:00Z"
       }
     },
@@ -1383,8 +1383,456 @@
       ],
       "origem": {
         "revisao": 1,
-        "coletadoEm": "2026-10-14T06:01:49Z",
+        "coletadoEm": "2026-11-12T17:28:22Z",
         "alteradoEm": "2026-10-14T04:07:00Z"
+      }
+    },
+    {
+      "id": "2026Q2",
+      "rotulo": "2º quad/2026",
+      "descricao": "2º Quadrimestre/2026",
+      "componente2": {
+        "eSF": {
+          "equipes": 3,
+          "distFinal": {
+            "Ótimo": 3,
+            "Bom": 0,
+            "Suficiente": 0,
+            "Regular": 0
+          },
+          "predominante": "Ótimo",
+          "dimensoes": [
+            {
+              "nome": "Dimensão Acompanhamento",
+              "dist": {
+                "Ótimo": 3,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              }
+            },
+            {
+              "nome": "Dimensão Cadastro",
+              "dist": {
+                "Ótimo": 3,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              }
+            }
+          ]
+        }
+      },
+      "componente3": {
+        "eMulti": {
+          "equipes": 2,
+          "notaAproximada": false,
+          "distFinal": {
+            "Ótimo": 1,
+            "Bom": 1,
+            "Suficiente": 0,
+            "Regular": 0
+          },
+          "notaMedia": 7.75,
+          "classificacaoNotaMedia": "Ótimo",
+          "indicadores": [
+            {
+              "codigo": "M1",
+              "nome": "Média de atendimentos da eMulti por pessoa",
+              "curto": "Atendimentos da eMulti por pessoa",
+              "peso": 6,
+              "janela": "4 meses",
+              "dist": {
+                "Ótimo": 0,
+                "Bom": 1,
+                "Suficiente": 1,
+                "Regular": 0
+              },
+              "equipes": 2,
+              "pontuacaoMedia": 0.625,
+              "faixa": "Suficiente",
+              "contribuicao": 3.75,
+              "potencial": 2.25
+            },
+            {
+              "codigo": "M2",
+              "nome": "Ações interprofissionais realizadas pela eMulti na APS",
+              "curto": "Ações interprofissionais",
+              "peso": 4,
+              "janela": "4 meses",
+              "dist": {
+                "Ótimo": 2,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 2,
+              "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
+              "contribuicao": 4.0,
+              "potencial": 0.0
+            }
+          ]
+        },
+        "eSB": {
+          "equipes": 3,
+          "notaAproximada": false,
+          "distFinal": {
+            "Ótimo": 1,
+            "Bom": 2,
+            "Suficiente": 0,
+            "Regular": 0
+          },
+          "notaMedia": 8.0,
+          "classificacaoNotaMedia": "Ótimo",
+          "indicadores": [
+            {
+              "codigo": "B1",
+              "nome": "1ª Consulta Odontológica programada na APS",
+              "curto": "1ª consulta odontológica programada",
+              "peso": 2,
+              "janela": "30 dias",
+              "dist": {
+                "Ótimo": 1,
+                "Bom": 1,
+                "Suficiente": 1,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.75,
+              "faixa": "Bom",
+              "contribuicao": 1.5,
+              "potencial": 0.5
+            },
+            {
+              "codigo": "B2",
+              "nome": "Tratamento Odontológico concluído na APS",
+              "curto": "Tratamento concluído",
+              "peso": 2,
+              "janela": "30 dias",
+              "dist": {
+                "Ótimo": 1,
+                "Bom": 2,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
+              "contribuicao": 1.6667,
+              "potencial": 0.3333
+            },
+            {
+              "codigo": "B3",
+              "nome": "Taxa de exodontias na APS",
+              "curto": "Taxa de exodontias",
+              "peso": 2,
+              "janela": "30 dias",
+              "dist": {
+                "Ótimo": 3,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
+              "contribuicao": 2.0,
+              "potencial": 0.0
+            },
+            {
+              "codigo": "B4",
+              "nome": "Escovação Supervisionada na APS",
+              "curto": "Escovação supervisionada",
+              "peso": 1,
+              "janela": "30 dias",
+              "dist": {
+                "Ótimo": 3,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
+              "contribuicao": 1.0,
+              "potencial": 0.0
+            },
+            {
+              "codigo": "B5",
+              "nome": "Procedimentos Odontológicos preventivos na APS",
+              "curto": "Procedimentos preventivos",
+              "peso": 2,
+              "janela": "30 dias",
+              "dist": {
+                "Ótimo": 0,
+                "Bom": 1,
+                "Suficiente": 0,
+                "Regular": 2
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.4166666666666667,
+              "faixa": "Regular",
+              "contribuicao": 0.8333,
+              "potencial": 1.1667
+            },
+            {
+              "codigo": "B6",
+              "nome": "Tratamento Restaurador Atraumático na APS",
+              "curto": "Tratamento restaurador atraumático",
+              "peso": 1,
+              "janela": "30 dias",
+              "dist": {
+                "Ótimo": 3,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
+              "contribuicao": 1.0,
+              "potencial": 0.0
+            }
+          ]
+        },
+        "eSF": {
+          "equipes": 3,
+          "notaAproximada": false,
+          "distFinal": {
+            "Ótimo": 2,
+            "Bom": 1,
+            "Suficiente": 0,
+            "Regular": 0
+          },
+          "notaMedia": 7.67,
+          "classificacaoNotaMedia": "Ótimo",
+          "indicadores": [
+            {
+              "codigo": "C1",
+              "nome": "Mais Acesso à Atenção Primária à Saúde",
+              "curto": "Mais Acesso à APS",
+              "peso": 1,
+              "janela": "30 dias",
+              "dist": {
+                "Ótimo": 3,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
+              "contribuicao": 1.0,
+              "potencial": 0.0
+            },
+            {
+              "codigo": "C2",
+              "nome": "Cuidado no Desenvolvimento Infantil",
+              "curto": "Desenvolvimento infantil",
+              "peso": 2,
+              "janela": "24 meses",
+              "dist": {
+                "Ótimo": 0,
+                "Bom": 0,
+                "Suficiente": 2,
+                "Regular": 1
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.4166666666666667,
+              "faixa": "Regular",
+              "contribuicao": 0.8333,
+              "potencial": 1.1667
+            },
+            {
+              "codigo": "C3",
+              "nome": "Cuidado da Gestante e da Puérpera",
+              "curto": "Gestação e puerpério",
+              "peso": 2,
+              "janela": "12 meses",
+              "dist": {
+                "Ótimo": 2,
+                "Bom": 1,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.9166666666666666,
+              "faixa": "Bom",
+              "contribuicao": 1.8333,
+              "potencial": 0.1667
+            },
+            {
+              "codigo": "C4",
+              "nome": "Cuidado da Pessoa com Diabetes Mellitus",
+              "curto": "Pessoa com diabetes",
+              "peso": 1,
+              "janela": "12 meses",
+              "dist": {
+                "Ótimo": 1,
+                "Bom": 2,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
+              "contribuicao": 0.8333,
+              "potencial": 0.1667
+            },
+            {
+              "codigo": "C5",
+              "nome": "Cuidado da Pessoa com Hipertensão",
+              "curto": "Pessoa com hipertensão",
+              "peso": 1,
+              "janela": "12 meses",
+              "dist": {
+                "Ótimo": 3,
+                "Bom": 0,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 1.0,
+              "faixa": "Ótimo",
+              "contribuicao": 1.0,
+              "potencial": 0.0
+            },
+            {
+              "codigo": "C6",
+              "nome": "Cuidado da Pessoa Idosa",
+              "curto": "Pessoa idosa",
+              "peso": 1,
+              "janela": "12 meses",
+              "dist": {
+                "Ótimo": 1,
+                "Bom": 2,
+                "Suficiente": 0,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.8333333333333334,
+              "faixa": "Bom",
+              "contribuicao": 0.8333,
+              "potencial": 0.1667
+            },
+            {
+              "codigo": "C7",
+              "nome": "Cuidado Integral à Saúde da Mulher",
+              "curto": "Mulher / prevenção do câncer",
+              "peso": 2,
+              "janela": "60 meses",
+              "dist": {
+                "Ótimo": 0,
+                "Bom": 2,
+                "Suficiente": 1,
+                "Regular": 0
+              },
+              "equipes": 3,
+              "pontuacaoMedia": 0.6666666666666666,
+              "faixa": "Suficiente",
+              "contribuicao": 1.3333,
+              "potencial": 0.6667
+            }
+          ]
+        }
+      },
+      "prioridades": [
+        {
+          "equipe": "eMulti",
+          "codigo": "M1",
+          "curto": "Atendimentos da eMulti por pessoa",
+          "peso": 6,
+          "janela": "4 meses",
+          "dist": {
+            "Ótimo": 0,
+            "Bom": 1,
+            "Suficiente": 1,
+            "Regular": 0
+          },
+          "pontuacaoMedia": 0.625,
+          "potencial": 2.25
+        },
+        {
+          "equipe": "eSB",
+          "codigo": "B5",
+          "curto": "Procedimentos preventivos",
+          "peso": 2,
+          "janela": "30 dias",
+          "dist": {
+            "Ótimo": 0,
+            "Bom": 1,
+            "Suficiente": 0,
+            "Regular": 2
+          },
+          "pontuacaoMedia": 0.4166666666666667,
+          "potencial": 1.1667
+        },
+        {
+          "equipe": "eSF",
+          "codigo": "C2",
+          "curto": "Desenvolvimento infantil",
+          "peso": 2,
+          "janela": "24 meses",
+          "dist": {
+            "Ótimo": 0,
+            "Bom": 0,
+            "Suficiente": 2,
+            "Regular": 1
+          },
+          "pontuacaoMedia": 0.4166666666666667,
+          "potencial": 1.1667
+        },
+        {
+          "equipe": "eSF",
+          "codigo": "C7",
+          "curto": "Mulher / prevenção do câncer",
+          "peso": 2,
+          "janela": "60 meses",
+          "dist": {
+            "Ótimo": 0,
+            "Bom": 2,
+            "Suficiente": 1,
+            "Regular": 0
+          },
+          "pontuacaoMedia": 0.6666666666666666,
+          "potencial": 0.6667
+        },
+        {
+          "equipe": "eSB",
+          "codigo": "B1",
+          "curto": "1ª consulta odontológica programada",
+          "peso": 2,
+          "janela": "30 dias",
+          "dist": {
+            "Ótimo": 1,
+            "Bom": 1,
+            "Suficiente": 1,
+            "Regular": 0
+          },
+          "pontuacaoMedia": 0.75,
+          "potencial": 0.5
+        },
+        {
+          "equipe": "eSB",
+          "codigo": "B2",
+          "curto": "Tratamento concluído",
+          "peso": 2,
+          "janela": "30 dias",
+          "dist": {
+            "Ótimo": 1,
+            "Bom": 2,
+            "Suficiente": 0,
+            "Regular": 0
+          },
+          "pontuacaoMedia": 0.8333333333333334,
+          "potencial": 0.3333
+        }
+      ],
+      "origem": {
+        "revisao": 1,
+        "coletadoEm": "2026-11-12T17:28:22Z",
+        "alteradoEm": "2026-11-12T17:28:22Z"
       }
     }
   ]
